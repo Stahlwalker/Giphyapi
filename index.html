@@ -11,18 +11,6 @@
 <body>
     
     <div class="container">
-        <!-- <div class="row1">
-            <p>Add an animal</p>
-            <!-- <button class="btn btn-default" type="submit">Button</button> -->
-            <!-- <form>
-                <div class="form-group">
-                  <!-- <label for="exampleInputEmail1"></label> -->
-                  <!-- <input type="animal" class="form-control" id="">
-                </div>
-                <button type="submit" class="btn btn-default">Submit</button>
-              </form> -->
-
-        <!-- </div> --> 
 
      <div class="newDiv">
             <div id="animal-view"></div>
@@ -43,7 +31,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript">
 
-    var animals = ["Dog", "Cat", "Horse", "Crow"];
+    var topics = ["Dog", "Cat", "Horse", "Crow"];
 
     // Function for displaying movie data
     function renderButtons() {
@@ -52,15 +40,15 @@
   // (this is necessary otherwise you will have repeat buttons)
     $("#animal-view").empty();
   // Loop through the array of movies, then generate buttons for each movie in the array
-    for (var i = 0; i < animals.length;i++) {
+    for (var i = 0; i < topics.length;i++) {
 
         var btn = $("<button>");
 
         btn.addClass("animal");
 
-        btn.attr("data-name", animals[i]);
+        btn.attr("data-name", topics[i]);
 
-        btn.text(animals[i]);
+        btn.text(topics[i]);
 
         $("#animal-view").append(btn);
 
@@ -79,9 +67,9 @@ $("#add-animal").on("click", function(event) {
 
         var userInput = $("#animal-input").val().trim();
       
-        console.log("Current: " + animals);
-        animals.push(userInput);
-        console.log("New Array: " + animals); 
+        console.log("Current: " + topics);
+        topics.push(userInput);
+        console.log("New Array: " + topics); 
         // The renderButtons function is called, rendering the list of movie buttons
         renderButtons();
       });
@@ -89,10 +77,8 @@ $("#add-animal").on("click", function(event) {
       // Calling the renderButtons function to display the initial list of movies
       renderButtons();
 
-
-
-    var queryURL = "https://api.giphy.com/v1/gifs/search?api_key=SOWE6KXJe9EunRBS1lQZ5GjK2dllHELi";
-    console.log(queryURL);
+      var queryURL = "https://api.giphy.com/v1/gifs/search?api_key=SOWE6KXJe9EunRBS1lQZ5GjK2dllHELi&q=animals&limit=10&offset=0&rating=PG-13&lang=en";
+        console.log(queryURL);
 
     $.ajax({
       url: queryURL,
@@ -101,10 +87,16 @@ $("#add-animal").on("click", function(event) {
       console.log(response);
     });
 
-    var animalGiphy = $("<div class='animalGiphy'>");
+    // var animalGiphy = $("<div class='animalGiphy'>");
     
+    //     if (searchTerm == "") {
+    //     queryURL = queryURL;
+    //   } else {
+    //     queryURL += "q=" + searchTerm + "&";
+    //   }
 
-
+  
+ 
 
     </script>
 </body>
