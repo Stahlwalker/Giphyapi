@@ -10,12 +10,33 @@
 <link rel="stylesheet" type="text/css" href="assets/style.css">
 <body>
     
+    <div class="container">
+        <div class="row1">
+            <p>Add an animal</p>
+            <!-- <button class="btn btn-default" type="submit">Button</button> -->
+            <form>
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Email address</label>
+                  <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+                </div>
+                <button type="submit" class="btn btn-default">Submit</button>
+              </form>
+
+
+        </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript">
 
-    var queryURL = "https://api.giphy.com/v1/gifs/search?api_key=SOWE6KXJe9EunRBS1lQZ5GjK2dllHELi&q=animals&limit=25&offset=0&rating=PG-13&lang=en";
+    var queryURL = "https://api.giphy.com/v1/gifs/search?api_key=SOWE6KXJe9EunRBS1lQZ5GjK2dllHELi";
     console.log(queryURL);
+
+    $.ajax({
+      url: queryURL,
+      method: 'GET'
+    }).done(function(response) {
+      console.log(response);
+    });
 
 
     </script>

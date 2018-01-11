@@ -1,0 +1,13 @@
+p {
+    color: blue;
+}
+
+.row1 {
+    background-color: rgb(44, 8, 102);
+    text-align: center;
+    color: white;
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: 12px;
+    font-weight: bold;
+}
