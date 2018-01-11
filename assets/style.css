@@ -33,3 +33,11 @@ p {
     width: 40%;
     float: right;
 }
+
+label {
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: 5px;
+    font-weight: 700;
+    margin-top: 10px;
+}
