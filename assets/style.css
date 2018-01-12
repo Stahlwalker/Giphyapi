@@ -41,3 +41,7 @@ label {
     font-weight: 700;
     margin-top: 10px;
 }
+
+#giphy-view {
+    background-color: black;
+}
