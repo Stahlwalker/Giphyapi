@@ -52,7 +52,8 @@ function displayGiphyInfo() {
     //   creating a div to hold the giphy
       var giphyDiv = $("<div class='giphy'>");
 
-      var rating1 = response.rating;
+      var rating1 = response.data[0].rating;
+    //   console.log(rating1);
 
       var pOne = $("<p>").text("Rating: " + rating1);
 
