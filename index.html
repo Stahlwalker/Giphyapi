@@ -62,7 +62,7 @@ function displayGiphyInfo() {
 
      
     //   creating a div to hold the giphy
-      var giphyDiv = $("<div class='giphy'>");
+      var giphyDiv = $("<div>");
 
 
       var rating1 = response.data[i].rating;
@@ -80,8 +80,31 @@ function displayGiphyInfo() {
       // console.log(imgURL);
 
       var image = $("<img>").attr("src", imgURL);
+      image.attr("class", "giphy");
 
       giphyDiv.append(image);
+
+      // add click handler after image loads
+      $(".giphy").on("click", function() {
+      console.log("click");
+      // The attr jQuery method allows us to get or set the value of any attribute on our HTML element
+    //   var state = $(this).attr(response.data[i].images.fixed_height_still.url);
+    //   var dataStill = response.data[i].images.fixed_height_still.url;
+    //   var dataAnimate = response.data[i].images.original.url
+    //   console.log(dataStill);
+    //   console.log(dataAnimate);
+
+
+    // var state = $(this).attr("data-state");
+    // if (state === "still") {
+    //     $(this).attr("src", $(this).attr(dataAnimate));
+    //     $(this).attr("data-state", dataAnimate);
+    //   } else {
+    //     $(this).attr("src", $(this).attr(dataStill));
+    //     $(this).attr("data-state", dataStill);
+    //   }
+    });
+
 
     //   putting the giphy ontop the previous giphy
       $("#giphy-view").prepend(giphyDiv);
@@ -136,19 +159,8 @@ $("#add-animal").on("click", function(event) {
      // Calling the renderButtons function to display the initial list of animals
      renderButtons();
 
-    $(".animal").on("click", function() {
-      // The attr jQuery method allows us to get or set the value of any attribute on our HTML element
-      var state = $(this).attr("src", response.data[i].images.fixed_height_still.url);
-      // If the clicked image's state is still, update its src attribute to what its data-animate value is.
-      // Then, set the image's data-state to animate
-      // Else set src to the data-still value
-      if (state === "still") {
-        $(this).attr("src", response.data[i].images.fixed_height_still.url);
-      } else {
-        $(this).attr("src", response.data[i].images.original.url);
-      }
-      
-    });
+   
+
 
 
     </script>
