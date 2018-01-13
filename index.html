@@ -81,29 +81,14 @@ function displayGiphyInfo() {
 
       var image = $("<img>").attr("src", imgURL);
       image.attr("class", "giphy");
+      image.attr("data-state", "still");
+      image.attr("data-still", response.data[i].images.fixed_height_still.url);
+      image.attr("data-animate", response.data[i].images.fixed_height.url);
+    
 
       giphyDiv.append(image);
 
-      // add click handler after image loads
-      $(".giphy").on("click", function() {
-      console.log("click");
-      // The attr jQuery method allows us to get or set the value of any attribute on our HTML element
-    //   var state = $(this).attr(response.data[i].images.fixed_height_still.url);
-    //   var dataStill = response.data[i].images.fixed_height_still.url;
-    //   var dataAnimate = response.data[i].images.original.url
-    //   console.log(dataStill);
-    //   console.log(dataAnimate);
-
-
-    // var state = $(this).attr("data-state");
-    // if (state === "still") {
-    //     $(this).attr("src", $(this).attr(dataAnimate));
-    //     $(this).attr("data-state", dataAnimate);
-    //   } else {
-    //     $(this).attr("src", $(this).attr(dataStill));
-    //     $(this).attr("data-state", dataStill);
-    //   }
-    });
+    
 
 
     //   putting the giphy ontop the previous giphy
@@ -160,7 +145,36 @@ $("#add-animal").on("click", function(event) {
      renderButtons();
 
    
+  // add click handler after image loads
+  $( "#giphy-view" ).on( "click", "img", function( event ) {
+      console.log("click");
+    //   var state = $(this).attr(response.data[i].images.fixed_height_still.url);
+    //   var dataStill = response.data[i].images.fixed_height_still.url;
+    //   var dataAnimate = response.data[i].images.original.url
+    
 
+      // var state = $(this).attr("src", response.data[i].images.fixed_height_still.url);
+      //      console.log("this is my current state" + state);
+      // if (state === "still") {
+      //   $(this).attr("src", response.data[i].images.fixed_height_still.url);
+      // } else {
+      //   $(this).attr("src", response.data[i].images.orginal.url);
+      // }
+      // var curImg = response.data[i].images.fixed_height_still.url;
+        console.log($(this));
+        var state = $(this).attr("data-state");
+           console.log("this is my current state" + state);
+           if (state === "still") {
+            console.log($(this).attr("data-animate"));
+            $(this).attr("src", $(this).attr("data-animate"));
+            $(this).attr("data-state", "animate");
+          } else {
+            $(this).attr("src", $(this).attr("data-still"));
+            $(this).attr("data-state", "still");
+          }
+    });
+
+    // Attach a delegated event handler
 
 
     </script>
