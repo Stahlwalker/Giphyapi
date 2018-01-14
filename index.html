@@ -32,15 +32,13 @@
 
 <!-- Gifs will be dumped here -->
     <div id="giphy-view"></div>  
-    <!-- <div id="buttons-view"></div> -->
+  
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript">
 
-    var topics = ["Dog", "Cat", "Horse", "Crow"];
+    var topics = ["Dog", "Lion", "Monkey", "Shark"];
     
-
-   
 
 function displayGiphyInfo() {
 
@@ -54,7 +52,7 @@ function displayGiphyInfo() {
       url: queryURL,
       method: 'GET'
     }).done(function(response) {
-    //   console.log(response);
+    
 
       var results = response.data;
 
@@ -76,20 +74,13 @@ function displayGiphyInfo() {
       var imgURL = response.data[i].images.fixed_height_still.url;
       console.log(imgURL);
 
-      // var imgURL = response.data[i].images.original.url;
-      // console.log(imgURL);
-
       var image = $("<img>").attr("src", imgURL);
       image.attr("class", "giphy");
       image.attr("data-state", "still");
       image.attr("data-still", response.data[i].images.fixed_height_still.url);
       image.attr("data-animate", response.data[i].images.fixed_height.url);
     
-
       giphyDiv.append(image);
-
-    
-
 
     //   putting the giphy ontop the previous giphy
       $("#giphy-view").prepend(giphyDiv);
@@ -99,13 +90,13 @@ function displayGiphyInfo() {
 
 }
 
- // Function for displaying movie data
+ // Function for displaying animal data
  function renderButtons() {
  
- // Delete the content inside the movies-view div prior to adding new movies
+ // Delete the content inside the animal-view div prior to adding new animals
  // (this is necessary otherwise you will have repeat buttons)
    $("#animal-view").empty();
- // Loop through the array of movies, then generate buttons for each movie in the array
+ // Loop through the array of animals, then generate buttons for each animal in the array
    for (var i = 0; i < topics.length;i++) {
 
        var btn = $("<button>");
@@ -148,19 +139,7 @@ $("#add-animal").on("click", function(event) {
   // add click handler after image loads
   $( "#giphy-view" ).on( "click", "img", function( event ) {
       console.log("click");
-    //   var state = $(this).attr(response.data[i].images.fixed_height_still.url);
-    //   var dataStill = response.data[i].images.fixed_height_still.url;
-    //   var dataAnimate = response.data[i].images.original.url
-    
-
-      // var state = $(this).attr("src", response.data[i].images.fixed_height_still.url);
-      //      console.log("this is my current state" + state);
-      // if (state === "still") {
-      //   $(this).attr("src", response.data[i].images.fixed_height_still.url);
-      // } else {
-      //   $(this).attr("src", response.data[i].images.orginal.url);
-      // }
-      // var curImg = response.data[i].images.fixed_height_still.url;
+   
         console.log($(this));
         var state = $(this).attr("data-state");
            console.log("this is my current state" + state);
@@ -173,9 +152,6 @@ $("#add-animal").on("click", function(event) {
             $(this).attr("data-state", "still");
           }
     });
-
-    // Attach a delegated event handler
-
 
     </script>
     </div>

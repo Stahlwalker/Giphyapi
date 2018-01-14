@@ -1,27 +1,13 @@
 body {
-    /* background-color: rgba(161, 155, 155, 0.589); */
     background-image: url('images/wood.jpg');
     width: 100%;
 }
-
 
 p {
     color: rgb(73, 71, 71);
     font-size: 20px;
     font-weight: bold;
 }
-
-/* .row1 {
-    background-color: rgb(111, 187, 238);
-    text-align: left;
-    color: rgb(133, 129, 129);
-    padding: 10px;
-    margin-top: 100px;
-    font-size: 16px;
-    font-weight: bold;
-    width: 40%;
-    float: right;
-} */
 
 .newDiv {
     background-color: rgb(178, 232, 248);
@@ -61,18 +47,6 @@ label {
         font-weight: bold;
     }
     
-    /* .row1 {
-        background-color: rgb(111, 187, 238);
-        text-align: left;
-        color: rgb(133, 129, 129);
-        padding: 10px;
-        margin-top: 100px;
-        font-size: 16px;
-        font-weight: bold;
-        width: 40%;
-        float: right;
-    } */
-    
     .newDiv {
         background-color: rgb(178, 232, 248);
         text-align: left;
@@ -102,7 +76,6 @@ label {
 @media screen and (max-width: 768px) { 
 
     body {
-        /* background-color: rgba(161, 155, 155, 0.589); */
         background-image: url('images/wood.jpg');
         width: 100%;
     }
@@ -113,18 +86,7 @@ label {
         font-size: 20px;
         font-weight: bold;
     }
-    
-    /* .row1 {
-        background-color: rgb(111, 187, 238);
-        text-align: left;
-        color: rgb(133, 129, 129);
-        padding: 10px;
-        margin-top: 100px;
-        font-size: 16px;
-        font-weight: bold;
-        width: 40%;
-        float: right;
-    } */
+
     
     .newDiv {
         background-color: rgb(178, 232, 248);
@@ -154,7 +116,6 @@ label {
 
 @media screen and (max-width: 640px) {
     body {
-        /* background-color: rgba(161, 155, 155, 0.589); */
         background-image: url('images/wood.jpg');
         width: 100%;
     }
@@ -165,18 +126,6 @@ label {
         font-size: 20px;
         font-weight: bold;
     }
-    
-    /* .row1 {
-        background-color: rgb(111, 187, 238);
-        text-align: left;
-        color: rgb(133, 129, 129);
-        padding: 10px;
-        margin-top: 100px;
-        font-size: 16px;
-        font-weight: bold;
-        width: 40%;
-        float: right;
-    } */
     
     .newDiv {
         background-color: rgb(178, 232, 248);
