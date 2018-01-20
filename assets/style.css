@@ -29,24 +29,16 @@ label {
     margin-top: 10px;
 }
 
-#giphy-view {
-    /* background-color: rgb(178, 232, 248); */
-}
-
-@media screen and (max-width: 980px) { 
+@media screen and (max-width: 980px) {
     body {
-        /* background-color: rgba(161, 155, 155, 0.589); */
         background-image: url('images/wood.jpg');
         width: 100%;
     }
-    
-    
     p {
         color: rgb(73, 71, 71);
         font-size: 20px;
         font-weight: bold;
     }
-    
     .newDiv {
         background-color: rgb(178, 232, 248);
         text-align: left;
@@ -58,7 +50,6 @@ label {
         width: 40%;
         float: right;
     }
-    
     label {
         display: inline-block;
         max-width: 100%;
@@ -66,28 +57,19 @@ label {
         font-weight: 700;
         margin-top: 10px;
     }
-    
-    #giphy-view {
-        /* background-color: rgb(178, 232, 248); */
-    }
-
+    #giphy-view {}
 }
 
-@media screen and (max-width: 768px) { 
-
+@media screen and (max-width: 768px) {
     body {
         background-image: url('images/wood.jpg');
         width: 100%;
     }
-    
-    
     p {
         color: rgb(73, 71, 71);
         font-size: 20px;
         font-weight: bold;
     }
-
-    
     .newDiv {
         background-color: rgb(178, 232, 248);
         text-align: left;
@@ -99,7 +81,6 @@ label {
         width: 40%;
         float: right;
     }
-    
     label {
         display: inline-block;
         max-width: 100%;
@@ -107,11 +88,6 @@ label {
         font-weight: 700;
         margin-top: 10px;
     }
-    
-    #giphy-view {
-        /* background-color: rgb(178, 232, 248); */
-    }
-
 }
 
 @media screen and (max-width: 640px) {
@@ -119,14 +95,11 @@ label {
         background-image: url('images/wood.jpg');
         width: 100%;
     }
-    
-    
     p {
         color: rgb(73, 71, 71);
         font-size: 20px;
         font-weight: bold;
     }
-    
     .newDiv {
         background-color: rgb(178, 232, 248);
         text-align: left;
@@ -138,16 +111,11 @@ label {
         width: 40%;
         float: right;
     }
-    
     label {
         display: inline-block;
         max-width: 100%;
         margin-bottom: 5px;
         font-weight: 700;
         margin-top: 10px;
-    }
-    
-    #giphy-view {
-        /* background-color: rgb(178, 232, 248); */
     }
 }
